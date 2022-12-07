@@ -41,7 +41,7 @@ public class ObjectPoolDriver : MonoBehaviour
 
         curLifeTime -= Time.deltaTime;
         if (curLifeTime <= 0f) {
-            curLifeTime = Random.Range(minLifeTime, lifeTime); ;
+            curLifeTime = Random.Range(minLifeTime, lifeTime);
 
             if (useObjectPool)
                 for (int i = ObjectPool.instance.transform.childCount - 1; i >= 0; --i) {
