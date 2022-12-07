@@ -7,6 +7,7 @@ public class ObjectPoolDriver : MonoBehaviour
     public bool useObjectPool = true;
     public float coolDown = 0.25f;
     public float lifeTime = 0.15f;
+    public float minLifeTime = 0.15f;
 
     private float curCoolDown = 0f;
     private float curLifeTime = 0f;
@@ -40,7 +41,7 @@ public class ObjectPoolDriver : MonoBehaviour
 
         curLifeTime -= Time.deltaTime;
         if (curLifeTime <= 0f) {
-            curLifeTime = Random.Range(0.05f, lifeTime); ;
+            curLifeTime = Random.Range(minLifeTime, lifeTime); ;
 
             if (useObjectPool)
                 for (int i = ObjectPool.instance.transform.childCount - 1; i >= 0; --i) {

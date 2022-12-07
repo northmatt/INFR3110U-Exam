@@ -248,8 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useObjectPool: 1
-  coolDown: 0.25
-  lifeTime: 0.35
+  coolDown: 0.01
+  lifeTime: 0.015
+  minLifeTime: 0.005
 --- !u!114 &941280520
 MonoBehaviour:
   m_ObjectHideFlags: 0
